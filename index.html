@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initital-scale=1.0" name="viewport">
+        <meta http-equiv="Cache-control" content="public">
 
         <title>Leonardo Lovato - Website Resume</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
 
         <!-- Style -->
         <link href="assets/style.css" rel="stylesheet">
@@ -19,24 +21,26 @@
     <body>
         <header>
             <div class="container">
-                <img src="assets/img/profile.jpg" alt="Leonardo Lovato">
+                <div class="image">
+                    <img width="800" height="514" src="assets/img/profile.webp" alt="Leonardo Lovato">
+                </div>
                 <h2>Leonardo Lovato</h2>
-                <p>Computer Scientist today <span>-</span> Artificial Intelligence Engineer tomorrow</p>
-                <nav id="navigation">
+                <p class="come-in-bottom">Computer Scientist today <span>-</span> Artificial Intelligence Engineer tomorrow</p>
+                <nav id="navigation" class="come-in-bottom">
                     <ul>
-                        <li class="home active"><a href="#home">Home</a></li>
-                        <li class="about"><a href="#about">About Me</a></li>
-                        <li class="resume"><a href="#resume">Resume</a></li>
-                        <li class="projects"><a href="#projects">Personal Projects</a></li>
-                        <li class="footer"><a href="footer">Contacts</a></li>
+                        <li class="home active"><div data-title="#home">Home</div></li>
+                        <li class="about"><div data-title="#about">About Me</div></li>
+                        <li class="resume"><div data-title="#resume">Resume</div></li>
+                        <li class="projects"><div data-title="#projects">Personal Projects</div></li>
+                        <li class="footer"><div data-title="footer">Contacts</div></li>
                     </ul>
                 </nav>
-                <div id="social">
+                <div id="social" class="come-in-bottom">
                     <ul>
-                        <li><a href="https://github.com/itLovaz" title="Github" target="_blank"><img width="64" height="64" src="assets/img/icons/github.png"></a></li>
-                        <li><a href="https://it.linkedin.com/in/leonardo-lovato-89988b1b1" target="_blank"><img width="64" height="64" src="assets/img/icons/linkedin.png"></a></li>
-                        <li><a href="https://www.facebook.com/leonardo.lovatoo" target="_blank"><img width="64" height="64" src="assets/img/icons/facebook.png"></a></li>
-                        <li><a href="https://www.instagram.com/leonardo_lovato_/" target="_blank"><img width="64" height="64" src="assets/img/icons/instagram.png"></a></li>
+                        <li><a href="https://github.com/itLovaz" title="Github" target="_blank"><img width="64" height="64" src="assets/img/icons/github.webp"></a></li>
+                        <li><a href="https://it.linkedin.com/in/leonardo-lovato-89988b1b1" target="_blank"><img width="64" height="64" src="assets/img/icons/linkedin.webp"></a></li>
+                        <li><a href="https://www.facebook.com/leonardo.lovatoo" target="_blank"><img width="64" height="64" src="assets/img/icons/facebook.webp"></a></li>
+                        <li><a href="https://www.instagram.com/leonardo_lovato_/" target="_blank"><img width="64" height="64" src="assets/img/icons/instagram.webp"></a></li>
                     </ul>
                 </div>
 
@@ -55,60 +59,96 @@
                     <h2 class="title">About Me</h2>
                     <div class="profile">
                         <div class="image">
-                            <img src="assets/img/profile.jpg" alt="Leonardo Lovato">
+                            <picture>
+                                <source srcset="assets/img/profile.webp" type="image/webp">
+                                <source srcset="assets/img/profile.jpg" type="image/jpg">
+                                <img width="800" height="514" src="assets/img/profile.jpg" alt="Leonardo Lovato">
+                            </picture>
                         </div>
                         <div class="info">
                             <h4>Leonardo Lovato <span>-</span> Computer Scientist</h4>
-                            <p>I am a currently working as a Full Stack Web Developer  and studying Artificial Intelligence @<a href="https://www.unitn.it/">University of Trento</a>. </p>
-                            <ul>
+                            <p class="moduleB">I am a currently working as a Full Stack Web Developer  and studying Artificial Intelligence @<a href="https://www.unitn.it/">University of Trento</a>. </p>
+                            <ul class="moduleB">
                                 <li><b>Education:</b> University of Trento</li>
                                 <li><b>Degree:</b> Bachelor in Computer Science</li>
                                 <li><b>Current Location:</b> Schio - Italy</li>
                                 <li><b>Email:</b> <a href="mailto:ittleonardolovato@gmail.com">ittleonardolovato@gmail.com</a></li>
                             </ul>
-                            <p>I am driven by curiosity, learning new things keeps me focused during my progresses. I am very motivated by difficult tasks, willing to improve and dedicated to challenging projects.</p>
+                            <p class="moduleB">I am driven by curiosity, learning new things keeps me focused during my progresses. I am very motivated by difficult tasks, willing to improve and dedicated to challenging projects.</p>
                         </div>
                     </div>
                     <div class="skills">
                         <h2 class="subtitle">Skills</h2>
                         <ul>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/problem-solving.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/problem-solving.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/problem-solving.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/problem-solving.png">
+                                </picture>
                                 <p>Problem Solving</p>
                                 <div data-title="94" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/html.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/html.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/html.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/html.png">
+                                </picture>
                                 <p>HTML5</p>
                                 <div data-title="91" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/css.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/css.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/css.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/css.png">
+                                </picture>
                                 <p>CSS3</p>
                                 <div data-title="85" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/php.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/php.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/php.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/php.png">
+                                </picture>
                                 <p>PHP 7.2</p>
                                 <div data-title="82" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/python.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/python.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/python.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/python.png">
+                                </picture>
                                 <p>Python 3</p>
                                 <div data-title="42" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/tensorflow.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/tensorflow.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/tensorflow.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/tensorflow.png">
+                                </picture>
                                 <p>TensorFlow 2</p>
                                 <div data-title="35" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/pytorch.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/pytorch.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/pytorch.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/pytorch.png">
+                                </picture>
                                 <p>PyTorch</p>
                                 <div data-title="24" class="amount"></div>              
                             </li>
                             <li>
-                                <img width="64" height="64" class="icon" src="assets/img/icons/csharp.png">
+                                <picture>
+                                    <source srcset="assets/img/icons/csharp.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/csharp.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/csharp.png">
+                                </picture>
                                 <p>C#</p>
                                 <div data-title="20" class="amount"></div>              
                             </li>
@@ -124,44 +164,44 @@
                         <div class="education">
                             <h2 class="subtitle">Education</h2>
                             <ul>
-                                <li>
+                                <li class="moduleB">
                                     <h4>Master in Artificial Intelligence Systems</h4>
                                     <h5>University of Trento - Trento, Italy</h5>
                                     <h5>September 2020 - Present</h5>
                                     <h3>Master course covering AI contents with focus on Computer Vision field</h3>
-                                    <p>Acquired:</p>
-                                    <p>Machine Learning, Deep Learning, Natual Language Processing, Computer Vision</p>
+                                    <p class="moduleC">Acquired:</p>
+                                    <p class="moduleC">Machine Learning, Deep Learning, Natual Language Processing, Computer Vision</p>
                                 </li>
-                                <li class="complete">
+                                <li class="complete moduleB">
                                     <h4>Erasmus+</h4>
                                     <h5>SOFIA UNIVERSITY ST. KLIMENT OHRIDSKI - Sofia, Bulgaria</h5>
                                     <h5>September 2018 - February 2019</h5>
                                     <h3>Erasmus+ studying period</h3>
-                                    <p>Acquired:</p>
-                                    <p>English (C1), Computational Complexity, Computability, AI Fundaments</p>
+                                    <p class="moduleC">Acquired:</p>
+                                    <p class="moduleC">English (C1), Computational Complexity, Computability, AI Fundaments</p>
                                 </li>
-                                <li class="complete">
+                                <li class="complete moduleB">
                                     <h4>Bachelor in Computer Science</h4>
                                     <h5>University of Trento - Trento, Italy</h5>
                                     <h5>September 2016 - March 2020</h5>
                                     <h3>Bachelor in Computer Science ended by a thesis involving the development of an Android application to enhance the human mental health</h3>
-                                    <p>Acquired:</p>
-                                    <p>Calculus I, Algebra, Statistics, Physics, Logics, Software Engineering, Algorithms and Data Structure, Databases, Object Oriented Programming, Web Programming, Android Programming</p>
+                                    <p class="moduleC">Acquired:</p>
+                                    <p class="moduleC">Calculus I, Algebra, Statistics, Physics, Logics, Software Engineering, Algorithms and Data Structure, Databases, Object Oriented Programming, Web Programming, Android Programming</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="experience">
                             <h2 class="subtitle">Working Experience</h2>
                             <ul>
-                                <li>
+                                <li class="moduleB">
                                     <h4>Full Stack Web Developer</h4>
                                     <h5>Schio - Vicenza, Italy</h5>
                                     <h5>July 2020 - Present</h5>
                                     <h3>- Full Stack Web Development using a proprietary CMS software. <br>
                                         - Deployment/customization of features based on customers's needs, creation of custom website graphics from scratch and implementation of new features in the proprietary CMS. <br>
                                         - Deployment of few tools for automating internal processes in bash and C#</h3>
-                                    <p>Acquired:</p>
-                                    <p>PHP, HTML, CSS, Javascript, jquery, MySQL, SEO, C#, SQLServer</p>
+                                    <p class="moduleC">Acquired:</p>
+                                    <p class="moduleC">PHP, HTML, CSS, Javascript, jquery, MySQL, SEO, C#, SQLServer</p>
                                 </li>
                             </ul>
                         </div>
@@ -173,11 +213,15 @@
                 <div class="wrapper">
                     <h2 class="title">Personal Projects</h2>
                     <ul>
-                        <li class="in-progress">
-                            <a href="#">
+                        <li class="in-progress moduleC">
+                            <a href="https://github.com/itLovaz/itLovaz.github.io">
                                 <div class="image">
                                     <div>
-                                        <img src="assets/img/website.jpg" alt="Personal Website Resume Page">
+                                        <picture>
+                                            <source srcset="assets/img/website.webp" type="image/webp">
+                                            <source srcset="assets/img/website.jpg" type="image/jpg">
+                                            <img width="800" height="599" alt="Personal Website Resume Page" src="assets/img/website.jpg">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="content">
@@ -186,11 +230,15 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="in-progress">
-                            <a href="#">
+                        <li class="in-progress moduleC">
+                            <a href="https://github.com/itLovaz/GRG">
                                 <div class="image">
                                     <div>
-                                        <img src="assets/img/grg.jpg" alt="Genius Rap Generator">
+                                        <picture>
+                                            <source srcset="assets/img/grg.webp" type="image/webp">
+                                            <source srcset="assets/img/grg.jpg" type="image/jpg">
+                                            <img width="800" height="600" src="assets/img/grg.jpg" alt="Genius Rap Generator">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="content">
@@ -210,19 +258,19 @@
                 <div class="container">
                     <div class="contact">
                         <ul>
-                            <li>
+                            <li class="moduleB">
                                 <span class="material-icons-outlined">location_on</span>
                                 <h4>Location</h4>
                                 <p>Schio - Vicenza, Italy</p> 
                             </li>
-                            <li>
+                            <li class="moduleB">
                                 <a href="mailto:ittleonardolovato@gmail.com">
                                     <span class="material-icons-outlined">email</span>
                                     <h4>Email</h4>
                                     <p>ittleonardolovato@gmail.com</p>
                                 </a> 
                             </li>
-                            <li>
+                            <li class="moduleB">
                                 <a href="tel:+393464114838">
                                     <span class="material-icons-outlined">phone</span>
                                     <h4>Phone number</h4>
