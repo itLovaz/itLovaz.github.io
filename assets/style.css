@@ -270,7 +270,7 @@ main {
 #home {
     position: relative;
     width: 100%;
-    background-image: url('img/home.jpg');
+    background-image: url('img/home.webp');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
