@@ -2,9 +2,15 @@ $(document).ready(function () {
     $('#home').css({
         'height': $(window).height()
     })
-    $('header').css({
-        'height': $(window).height()
-    })
+    if($(window).width() > 768) {
+        $('header').css({
+            'height': $(window).height()
+        })
+    } else {
+        $('header').css({
+            'max-height': $(window).height()
+        })
+    }
 
     if ($(window).width() > 1280) {
         $('#about .skills ul').css({ 'width': ($('#about .skills ul li').length * 222) - 12 })

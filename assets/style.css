@@ -813,6 +813,13 @@ footer .container .contact ul li:hover a p{
         margin-top: 20px;
         margin-bottom: 12px;
     }
+    .minimized header > .container > p {
+        font-size: 12px;
+        line-height: 10px;
+    }
+    .minimized header > .container > p span{
+        margin-bottom: 8px;
+    }
     .minimized #navigation ul {
         margin-top: 12px;
     }
@@ -937,7 +944,13 @@ footer .container .contact ul li:hover a p{
         width: calc(100% - 40px);
         margin-left: 20px;
     }
+    h2.subtitle {
+        font-size: 20px;
+    }
 
+    header {
+        height: 100%;
+    }
     header > .container {
         left: 30px;
         width: calc(100% - 60px);
@@ -986,6 +999,12 @@ footer .container .contact ul li:hover a p{
         margin: 4px;
         padding: 4px;
     }
+
+
+    #about .profile {
+        overflow: hidden;
+    }
+
 
     #projects ul li div.image {
         padding-top: 55%;
