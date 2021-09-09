@@ -957,7 +957,32 @@ footer .container .contact ul li:hover a p{
     }
     .minimized header {
         left: -260px;
+        height: calc(100% + 60px);
+        /*animation: header-to-left ease forwards;*/
     }
+
+    /*@keyframes header-to-left{
+        0%{
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+        33%{
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        66%{
+            left: -260px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        100%{
+            left: -260px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }*/
     .minimized header.open {
         left: 0;
     }
@@ -998,6 +1023,13 @@ footer .container .contact ul li:hover a p{
     #social ul li, #navigation ul li {
         margin: 4px;
         padding: 4px;
+    }
+
+    #home {
+        background-position: 66%;
+        height: 100vh  !important;
+        /*background-size: initial;
+        height: 100vh !important;*/
     }
 
 

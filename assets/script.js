@@ -1,14 +1,15 @@
 $(document).ready(function () {
-    $('#home').css({
-        'height': $(window).height()
-    })
+    var windowHeight = $(window).height() 
     if($(window).width() > 768) {
         $('header').css({
-            'height': $(window).height()
+            'height': windowHeight
+        })
+        $('#home').css({
+            'height': windowHeight
         })
     } else {
         $('header').css({
-            'max-height': $(window).height()
+            'max-height': windowHeight + 60
         })
     }
 
