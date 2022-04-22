@@ -1,3 +1,5 @@
+let current_element_index = 1;
+let is_scrolling = false;
 $(document).ready(function () {
     var windowHeight = $(window).height() 
     if($(window).width() > 768) {

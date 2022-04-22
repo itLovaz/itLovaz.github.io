@@ -1,3 +1,6 @@
+/***********************************
+ GENERAL 
+***********************************/
 body {
     margin: 0;
     position: relative;
@@ -8,7 +11,7 @@ body * {
 }
 .wrapper {
     width: calc(100% - 520px);
-    margin-left: 420px;
+    margin-left: 400px;
     margin-right: 100px;
 }
 ul {
@@ -71,7 +74,9 @@ h2.subtitle:after {
     border-bottom: 2px solid #333;
 }
 
-
+/***********************************
+ HEADER 
+***********************************/
 header {
     position: absolute;
     top: 0;
@@ -266,7 +271,9 @@ main {
     overflow: hidden;
 }
 
-
+/***********************************
+ HOME 
+***********************************/
 #home {
     position: relative;
     width: 100%;
@@ -289,8 +296,11 @@ main {
 }
 
 
+/***********************************
+ ABOUT 
+***********************************/
 #about {
-    margin-top: 60px;
+    margin-top: 40px;
     overflow: hidden;
 }
 #about .profile{
@@ -322,12 +332,12 @@ main {
     font-weight: 700;
 }
 #about .profile > div.info p{
-    margin: 8px 0 0 0;
+    margin: 16px 0 0 0;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 #about .profile > div.info ul{
-    margin: 20px 0 16px 0;
+    margin: 24px 0 18px 0;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -336,6 +346,9 @@ main {
 #about .profile > div.info li{
     width: 40%;
     margin-bottom: 4px;
+}
+#about .profile > div.info li:nth-child(even) {
+    width: 50%;
 }
 #about .profile > div.info li b{
     position: relative;
@@ -393,10 +406,13 @@ main {
 
 
 
+/***********************************
+ RESUME 
+***********************************/
 #resume {
     margin-top: 40px;
     background-color: whitesmoke;
-    padding: 20px 0 40px 0;
+    padding: 32px 0 40px 0;
     overflow: hidden;
 }
 #resume .container {
@@ -406,8 +422,8 @@ main {
     justify-content: flex-start;
 }
 #resume .container > div {
-    width: 45%;
-    padding-right: 5%;
+    width: 47.5%;
+    padding-right: 2.5%;
 }
 #resume .container > div > ul {
     width: calc(100% - 24px);
@@ -448,12 +464,12 @@ main {
 }
 #resume .container > div > ul li h5{
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     color: #555;
-    margin: 4px 0 8px 0;
+    margin: 8px 0 8px 0;
 }
 #resume .container > div > ul li h5:first-of-type {
-    margin-bottom: -5px;
+    margin-bottom: -6px;
 }
 #resume .container > div > ul li h3{
     font-weight: 600;
@@ -471,8 +487,11 @@ main {
 
 
 
+/***********************************
+ PROJECTS 
+***********************************/
 #projects {
-    margin-top: 40px;
+    margin-top: 32px;
     overflow: hidden;
 }
 
@@ -495,14 +514,14 @@ main {
     content: '';
     top: calc(100% + 24px);
     left: 0;
-    width: calc(80% + 20px);
+    width: calc(92% - 20px);
     border-bottom: 2px solid black;
 }
 #projects ul li:nth-child(1):after{
     position: absolute;
     content: '';
     top: calc(100% + 15px);
-    left: calc(80% + 20px);
+    left: calc(92% - 20px);
     width: 16px;
     height: 16px;
     border: 2px solid black;
@@ -591,8 +610,90 @@ main {
 
 
 
+/***********************************
+ MORE 
+***********************************/
+#more {
+    padding: 32px 0 60px 0;
+    background-color: whitesmoke;
+
+    display: none;
+}
+#more h2{
+    margin-bottom: 36px;
+}
+#more div.content {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 380px;
+}
+#more div.content > div.text {
+    width: 25%;
+    position: relative;
+    height: 100%;
+}
+#more div.content > div.text > span {
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    color: #666;
+    transition: all 300ms;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: 700;
+}
+#more div.content > div.text > span:hover {
+    color: black;
+}
+#more div.content > div.text > span.prev {
+    margin-right: 48px;
+}
+#more div.content > div.images{
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#more div.content > div.images > div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#more div.content > div.images picture{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#more div.content > div.images picture img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 24px;
+}
+#more div.content > div.images picture:last-child img{
+    margin-right: 0;
+}
+
+
+/***********************************
+ FOOTER 
+***********************************/
 footer {
-    margin: 60px 0 80px 0;
+    margin: 32px 0 80px 0;
     overflow: hidden;
 }
 footer .container{
@@ -671,6 +772,9 @@ footer .container .contact ul li:hover a p{
 *   1440px
 */
 @media screen and (max-width:1440px) {
+    /***********************************
+     GENERAL
+    ***********************************/
     .wrapper {
         width: calc(100% - 400px);
         margin-left: 360px;
@@ -686,10 +790,16 @@ footer .container .contact ul li:hover a p{
 */
 @media screen and (max-width:1280px) {
 
+    /***********************************
+    GENERAL 
+    ***********************************/
     h2.subtitle:after {
         width: 35px;
     }
 
+    /***********************************
+    HEADER 
+    ***********************************/
     header > .container {
         top: unset;
         bottom: 10%;
@@ -698,6 +808,9 @@ footer .container .contact ul li:hover a p{
         width: calc(100% - 240px);
     }
 
+    /***********************************
+    ABOUT 
+    ***********************************/
     #about .profile {
         height: auto;
     }
@@ -710,7 +823,9 @@ footer .container .contact ul li:hover a p{
     }
     #about .profile > div.image img{
         height: auto;
+        min-height: 340px;
         width: 100%;
+        object-fit: cover;
     }
     #about .skills {
         width: 20%;
@@ -762,11 +877,23 @@ footer .container .contact ul li:hover a p{
     }
 
 
+    /***********************************
+    PROJECTS 
+    ***********************************/
     #projects ul li div.content h4 {
         margin: 10% 0 15px 0;
         padding: 0 2.5%;
     }
+    /***********************************
+     MORE 
+    ***********************************/
+    #more div.content {
+        height: 300px;
+    }
 
+    /***********************************
+    FOOTER 
+    ***********************************/
     footer .container .contact ul li {
         width: 31%;
     }
@@ -793,6 +920,9 @@ footer .container .contact ul li:hover a p{
 *   1024px
 */
 @media screen and (max-width:1024px) {
+    /***********************************
+    GENERAL 
+    ***********************************/
     .wrapper {
         width: calc(100% - 300px);
         margin-left: 280px;
@@ -802,6 +932,9 @@ footer .container .contact ul li:hover a p{
         font-size: 16px;
     }
 
+    /***********************************
+    HEADER 
+    ***********************************/
     .minimized header {
         width: 260px;
     }
@@ -835,6 +968,9 @@ footer .container .contact ul li:hover a p{
         order: 3;
     }
 
+    /***********************************
+    ABOUT 
+    ***********************************/
     #about .profile > div.image {
         width: 70%;
     }
@@ -843,6 +979,9 @@ footer .container .contact ul li:hover a p{
     }
 
 
+    /***********************************
+    RESUME 
+    ***********************************/
     #resume .container > div > ul h4 {
         font-size: 18px;
     }
@@ -851,6 +990,9 @@ footer .container .contact ul li:hover a p{
         padding-right: 5px;
     }
 
+    /***********************************
+    PROJECTS 
+    ***********************************/
     #projects ul li {
         width: 100%;
         margin-right: 0;
@@ -861,13 +1003,13 @@ footer .container .contact ul li:hover a p{
         margin-bottom: 0;
     }
     #projects ul li:nth-child(1)::before{
-        width: calc(80% - 20px);
+        width: calc(95% - 20px);
     }
     #projects ul li:nth-child(2)::before {
         width: calc(25% - 20px);
     }
     #projects ul li:nth-child(1)::after{
-        left: calc(80% - 20px);
+        left: calc(95% - 20px);
     }
     #projects ul li:nth-child(2)::after {
         left: calc(25% - 20px);
@@ -875,8 +1017,30 @@ footer .container .contact ul li:hover a p{
     #projects ul li div.image {
         padding-top: 45%;
     }
+    /***********************************
+     MORE 
+    ***********************************/
+    #more div.content {
+        height: auto;
+    }
+    #more div.content > div.text {
+        width: 100%;
+        height: auto;
+        padding-bottom: 24px;
+    }
+    #more div.content > div.text > span {
+        right: 0;
+    }
+    #more div.content > div.images {
+        margin-top: 16px;
+        width: 100%;
+        height: 320px;
+    }
     
 
+    /***********************************
+    FOOTER 
+    ***********************************/
     footer .container .contact ul {
         flex-wrap: wrap;
         margin-top: 0;
@@ -940,6 +1104,9 @@ footer .container .contact ul li:hover a p{
 *   768px
 */
 @media screen and (max-width:768px) {
+    /***********************************
+    GENERAL 
+    ***********************************/
     .wrapper {
         width: calc(100% - 40px);
         margin-left: 20px;
@@ -948,6 +1115,9 @@ footer .container .contact ul li:hover a p{
         font-size: 20px;
     }
 
+    /***********************************
+    HEADER 
+    ***********************************/
     header {
         height: 100%;
     }
@@ -1025,6 +1195,9 @@ footer .container .contact ul li:hover a p{
         padding: 4px;
     }
 
+    /***********************************
+    HOME 
+    ***********************************/
     #home {
         background-position: 66%;
         height: 100vh  !important;
@@ -1033,11 +1206,17 @@ footer .container .contact ul li:hover a p{
     }
 
 
+    /***********************************
+    ABOUT 
+    ***********************************/
     #about .profile {
         overflow: hidden;
     }
 
 
+    /***********************************
+    PROJECTS 
+    ***********************************/
     #projects ul li div.image {
         padding-top: 55%;
     }
@@ -1061,6 +1240,9 @@ footer .container .contact ul li:hover a p{
 *   540px
 */
 @media screen and (max-width:540px) {
+    /***********************************
+    GENERAL 
+    ***********************************/
     h2.title {
         text-align: center;
     }
@@ -1069,6 +1251,9 @@ footer .container .contact ul li:hover a p{
         transform: translateX(-50%);
     }
 
+    /***********************************
+    HEADER 
+    ***********************************/
     header > .container {
         bottom: 0;
         justify-content: flex-start;
@@ -1109,6 +1294,9 @@ footer .container .contact ul li:hover a p{
     }
 
 
+    /***********************************
+    ABOUT 
+    ***********************************/
     #about {
         margin-top: 30px;
     }
@@ -1117,6 +1305,12 @@ footer .container .contact ul li:hover a p{
     }
     #about .profile {
         justify-content: center;
+    }
+    #about .profile > div.image {
+        width: 95%;
+    }
+    #about .profile > div.image img {
+        min-height: unset;
     }
     #about .profile > div.info {
         margin-top: 0;
@@ -1128,11 +1322,14 @@ footer .container .contact ul li:hover a p{
     #about .profile > div.info h4 {
         width: 100%;
         line-height: 18px;
-        margin-bottom: 12px;
+        margin: 24px 0 12px 0;
     }
     #about .profile > div.info h4 span {
         width: 100%;
         display: block;
+    }
+    #about .profile > div.info ul {
+        font-size: 15px;
     }
     #about .skills {
         position: relative;
@@ -1148,8 +1345,12 @@ footer .container .contact ul li:hover a p{
         width: calc(47.5% - 12px);
         margin-right: 0;
     }
+    
 
 
+    /***********************************
+    RESUME 
+    ***********************************/
     #resume .container > div {
         width: 100%;
         padding: 0;
@@ -1160,6 +1361,9 @@ footer .container .contact ul li:hover a p{
     }
 
 
+    /***********************************
+    PROJECTS 
+    ***********************************/
     #projects ul li div.image {
         padding-top: 75%;
     }
@@ -1169,22 +1373,44 @@ footer .container .contact ul li:hover a p{
     #projects ul li div.content p {
         font-size: 14px;
     }
+    /***********************************
+     MORE 
+    ***********************************/
+    #more div.content > div.images {
+        height: 260px;
+    }
 }
 
 /**
 *   400px
 */
 @media screen and (max-width:400px) {
+    /***********************************
+    ABOUT 
+    ***********************************/
     #about .skills ul li {
         width: calc(100% - 12px);
     }
 
 
 
+    /***********************************
+    PROJECTS
+    ***********************************/
     #projects ul li div.image {
         padding-top: 90%;
     }
+    /***********************************
+     MORE 
+    ***********************************/
+    #more div.content > div.images {
+        height: 200px;
+    }
 
+
+    /***********************************
+    FOOTER 
+    ***********************************/
     footer .container .contact ul li:nth-child(n){
         width: 100%;
         margin-bottom: 5%;
@@ -1208,6 +1434,9 @@ footer .container .contact ul li:hover a p{
 
 
 
+/***********************************
+ANIMATIONS 
+***********************************/
 .moduleC,
 .moduleB {
     opacity: 0;
