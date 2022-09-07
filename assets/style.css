@@ -240,7 +240,12 @@ header div.credits a{
 
     cursor: pointer;
 }
-#navigation ul li.active div,
+#navigation ul li > span{
+    color: #ffffff99;
+    cursor: default;
+    margin: 0 8px;
+}
+#navigation ul li.active div.link,
 #navigation ul li.active a {
     color: white;
     letter-spacing: 1px;
@@ -252,7 +257,7 @@ header div.credits a{
 #navigation ul li:last-child{
     margin-right: 0;
 }
-#navigation ul li:hover div,
+#navigation ul li div:hover,
 #navigation ul li:hover a{
     color: #ffffff;
 }
@@ -310,6 +315,7 @@ main {
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
 }
 #about .profile > div.image{
     width: 32.5%;
@@ -357,26 +363,29 @@ main {
 #about .profile > div.info p:last-child{
     margin: 0;
 }
-#about .skills {
+ #about .skills {
     overflow: scroll;
-}
+} 
 #about .skills ul{
-    width: 2000px;
+    /* width: 2000px; */
+    width: 100%;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 #about .skills ul li{
-    width: 184px;
-    margin-right: 12px;
+    /* width: 184px; */
+    width: calc(19% - 24px);
+    /* margin-right: 12px; */
+    margin-bottom: 1.25%;
     background-color: transparent;
     border: 1px solid #ccc;
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 96px;
+    height: 75px;
     padding: 0 12px;
     border-radius: 4px;
     overflow: hidden;
@@ -385,14 +394,15 @@ main {
     margin-right: 0;
 }
 #about .skills ul li img{
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
 }
 #about .skills ul li p{
     color: black;
     margin-left: 12px;
 }
 #about .skills ul li div.amount{
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -459,7 +469,7 @@ main {
     border-radius: 50%;
     border: 2px solid black;
 }
-#resume .container > div > ul li.complete h4:before{
+#resume .container > div > ul li.completed h4:before{
     background-color: black;
 }
 #resume .container > div > ul li h5{
@@ -472,8 +482,11 @@ main {
     margin-bottom: -6px;
 }
 #resume .container > div > ul li h3{
-    font-weight: 600;
+    font-weight: 300;
     font-size: 16px;
+}
+#resume .container > div > ul li h3 b{
+    font-weight: 600;
 }
 #resume .container > div > ul li p:first-of-type{
     margin-bottom: -15px;
@@ -502,47 +515,48 @@ main {
     justify-content: flex-start;
 }
 #projects ul li{
-    width: calc(50% - 60px);
+    width: calc(33.333% - 60px);
     height: 100%;
     margin-right: 60px;
     position: relative;
     border-radius: 4px;
     margin-bottom: 24px;
 }
-#projects ul li:nth-child(1):before{
+#projects ul li.completed:before{
     position: absolute;
     content: '';
     top: calc(100% + 24px);
     left: 0;
-    width: calc(92% - 20px);
+    width: calc(100% - 10px);
     border-bottom: 2px solid black;
 }
-#projects ul li:nth-child(1):after{
+#projects ul li.completed:after{
     position: absolute;
     content: '';
     top: calc(100% + 15px);
-    left: calc(92% - 20px);
+    left: calc(100% - 10px);
     width: 16px;
     height: 16px;
+    background-color: black;
     border: 2px solid black;
     border-radius: 50%;
 }
-#projects ul li:nth-child(2){
+#projects ul li.in-progress.gtg{
     margin-top: 30px;
 }
-#projects ul li:nth-child(2):before{
+#projects ul li.in-progress.gtg:before{
     position: absolute;
     content: '';
     top: -24px;
     left: 0;
-    width: calc(23% + 20px);
+    width: calc(48% + 20px);
     border-bottom: 2px solid black;
 }
-#projects ul li:nth-child(2):after{
+#projects ul li.in-progress.gtg:after{
     position: absolute;
     content: '';
     top: -34px;
-    left: calc(23% + 20px);
+    left: calc(48% + 20px);
     width: 16px;
     height: 16px;
     border: 2px solid black;
@@ -693,7 +707,9 @@ main {
  FOOTER 
 ***********************************/
 footer {
-    margin: 32px 0 80px 0;
+    /* margin: 32px 0 80px 0; */
+    padding: 32px 0 80px 0;
+    background-color: whitesmoke;
     overflow: hidden;
 }
 footer .container{
@@ -1437,6 +1453,7 @@ footer .container .contact ul li:hover a p{
 /***********************************
 ANIMATIONS 
 ***********************************/
+.moduleCfast,
 .moduleC,
 .moduleB {
     opacity: 0;
@@ -1444,6 +1461,9 @@ ANIMATIONS
 }.come-in {
     animation: come-in 1.5s ease forwards;
     animation-duration: 1.5s
+}.come-in-fast {
+    animation: come-in 1s ease forwards;
+    animation-duration: 1s
 }.come-in-bottom {
     transform: translateY(150 px);animation: come-in-bottom 1.5s ease forwards;
     animation-duration: 1.5s
@@ -1463,6 +1483,45 @@ ANIMATIONS
 .come-in:nth-child(5n),
 .come-in-bottom:nth-child(5n){
     animation-delay:1200ms
+}
+.come-in:nth-child(6n),
+.come-in-bottom:nth-child(6n){
+    animation-delay:1500ms
+}
+.come-in:nth-child(7n),
+.come-in-bottom:nth-child(7n){
+    animation-delay:1800ms
+}
+.come-in:nth-child(8n),
+.come-in-bottom:nth-child(8n){
+    animation-delay:2100ms
+}
+.come-in-fast:nth-child(2n){
+    animation-delay:150ms
+}
+.come-in-fast:nth-child(3n){
+    animation-delay:300ms
+}
+.come-in-fast:nth-child(4n){
+    animation-delay:450ms
+}
+.come-in-fast:nth-child(5n){
+    animation-delay:600ms
+}
+.come-in-fast:nth-child(6n){
+    animation-delay:750ms
+}
+.come-in-fast:nth-child(7n){
+    animation-delay:900ms
+}
+.come-in-fast:nth-child(8n){
+    animation-delay:1050ms
+}
+.come-in-fast:nth-child(9n){
+    animation-delay:1200ms
+}
+.come-in-fast:nth-child(10n){
+    animation-delay:1350ms
 }
 
 @keyframes come-in-bottom{
@@ -1486,7 +1545,7 @@ ANIMATIONS
     }
 }
 
-@media screen and(max-width: 660 px) {
+@media screen and(max-width: 660px) {
     .come-in-bottom {
         transform: translate(0, 0);
         animation: come-in 2.0s ease forwards

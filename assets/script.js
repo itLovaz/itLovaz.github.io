@@ -15,9 +15,10 @@ $(document).ready(function () {
         })
     }
 
-    if ($(window).width() > 1280) {
+    // no more horizontal slider
+    /*if ($(window).width() > 1280) {
         $('#about .skills ul').css({ 'width': ($('#about .skills ul li').length * 222) - 12 })
-    } else if ($(window).width() > 540) {
+    } else*/ if ($(window).width() > 540) {
         $('#about .skills').css({ 'max-height': ($('#about .profile > div.image').height()) })
     }
 
@@ -29,13 +30,14 @@ $(document).ready(function () {
             $('body').removeClass('minimized');
         }
 
-        if (isScrolledIntoView('#about .skills ul')) {
-            setTimeout(function () {
-                $('#about .skills li div.amount').each(function () {
-                    $(this).css({ 'max-width': $(this).data('title') + '%' })
-                });
-            }, 300);
-        }
+        // no more animated percentage
+        // if (isScrolledIntoView('#about .skills ul')) {
+        //     setTimeout(function () {
+        //         $('#about .skills li div.amount').each(function () {
+        //             $(this).css({ 'max-width': $(this).data('title') + '%' })
+        //         });
+        //     }, 300);
+        // }
 
         if (isScrolledIntoView('#home')) {
             $('#navigation ul li').removeClass('active');
@@ -81,17 +83,35 @@ $(document).ready(function () {
 
     var body = $("html, body");
     $('#navigation ul li div').on('click', function () {
-        if ($('header').hasClass('open')) {
-            $('header').removeClass('open');
-        }
+        if($(this).attr('id') == "download-resume") {
+            downloadURI("https://github.com/itLovaz/itLovaz.github.io/raw/main/CV_LEONARDO_LOVATO.pdf");
+        } else {
+            if ($('header').hasClass('open')) {
+                $('header').removeClass('open');
+            }
 
-        body.stop().animate({ scrollTop: ($($(this).data('title')).offset().top) - 100 }, 1200, 'swing', function () {
-        });
+            body.stop().animate({ scrollTop: ($($(this).data('title')).offset().top) - 100 }, 1200, 'swing', function () {
+            });
+        }
 
     });
 
     initScrollAnimation();
 });
+
+//https://stackoverflow.com/questions/3749231/download-file-using-javascript-jquery
+function downloadURI(uri, name = '') 
+{
+    var link = document.createElement("a");
+    // If you don't know the name or want to use
+    // the webserver default set name = ''
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
 
 function isScrolledIntoView(elem) {
     var docViewTop = $(window).scrollTop();
@@ -117,9 +137,16 @@ function initScrollAnimation() {
 
     var win = $(window);
     var allModsC = $(".moduleC");
+    var allModsCfast = $(".moduleCfast");
     var allModsB = $(".moduleB");
 
     allModsC.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(!0)) {
+            el.addClass("already-visible")
+        }
+    });
+    allModsCfast.each(function(i, el) {
         var el = $(el);
         if (el.visible(!0)) {
             el.addClass("already-visible")
@@ -136,6 +163,12 @@ function initScrollAnimation() {
             var el = $(el);
             if (el.visible(!0)) {
                 el.addClass("come-in")
+            }
+        });
+        allModsCfast.each(function(i, el) {
+            var el = $(el);
+            if (el.visible(!0)) {
+                el.addClass("come-in-fast")
             }
         });
         allModsB.each(function(i, el) {

@@ -3,4 +3,4 @@
 Personal Website page accessible [here](https://itlovaz.github.io/)
 
 
-(last updated on 22-04-22)
+(last updated on 07-09-22)

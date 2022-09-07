@@ -12,11 +12,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
 
         <!-- Style -->
-        <link href="assets/style.css" rel="stylesheet">
+        <link href="assets/style.css?v=1.1" rel="stylesheet">
 
         <!-- JS -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/script.js"></script>
+        <script type="text/javascript" src="assets/script.js?v=1.1"></script>
     </head>
     <body>
         <header>
@@ -25,14 +25,14 @@
                     <img width="800" height="514" src="assets/img/profile.webp" alt="Leonardo Lovato">
                 </div>
                 <h2>Leonardo Lovato</h2>
-                <p class="come-in-bottom">Computer Scientist today <span>-</span> Artificial Intelligence Engineer tomorrow</p>
+                <p class="come-in-bottom">Computer Scientist <span>-</span> M.S. Student in Artificial Intelligence</p>
                 <nav id="navigation" class="come-in-bottom">
                     <ul>
-                        <li class="home active"><div data-title="#home">Home</div></li>
-                        <li class="about"><div data-title="#about">About Me</div></li>
-                        <li class="resume"><div data-title="#resume">Resume</div></li>
-                        <li class="projects"><div data-title="#projects">Personal Projects</div></li>
-                        <li class="footer"><div data-title="footer">Contacts</div></li>
+                        <li class="home active"><div class="link" data-title="#home">Home</div></li>
+                        <li class="about"><div class="link" data-title="#about">About Me</div></li>
+                        <li class="resume"><div class="link" data-title="#resume">Resume</div> <span>-</span> <div id="download-resume">Download</div></li>
+                        <li class="projects"><div class="link" data-title="#projects">Personal Projects</div></li>
+                        <li class="footer"><div class="link" data-title="footer">Contacts</div></li>
                     </ul>
                 </nav>
                 <div id="social" class="come-in-bottom">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="info">
                             <h4>Leonardo Lovato <span>-</span> Computer Scientist</h4>
-                            <p class="moduleB">I am a currently working as a <b>Full Stack Web Developer</b> and studying <b>Artificial Intelligence</b> @<a href="https://www.unitn.it/" target="_blank">University of Trento</a>. </p>
+                            <p class="moduleB">I am a currently studying <b>Artificial Intelligence</b> @<a href="https://www.unitn.it/" target="_blank">University of Trento</a>. </p>
                             <ul class="moduleB">
                                 <li><b>Education:</b> University of Trento</li>
                                 <li><b>Degree:</b> Bachelor in Computer Science</li>
@@ -80,7 +80,7 @@
                     <div class="skills">
                         <h2 class="subtitle">Skills</h2>
                         <ul>
-                            <li>
+                            <li class="moduleCfast">
                                 <picture>
                                     <source srcset="assets/img/icons/problem-solving.webp" type="image/webp">
                                     <source srcset="assets/img/icons/problem-solving.png" type="image/jpg">
@@ -89,43 +89,16 @@
                                 <p>Problem Solving</p>
                                 <div data-title="94" class="amount"></div>              
                             </li>
-                            <li>
-                                <picture>
-                                    <source srcset="assets/img/icons/php.webp" type="image/webp">
-                                    <source srcset="assets/img/icons/php.png" type="image/jpg">
-                                    <img width="64" height="64" class="icon" src="assets/img/icons/php.png">
-                                </picture>
-                                <p>PHP 7.2</p>
-                                <div data-title="92" class="amount"></div>              
-                            </li>
-                            <li>
-                                <picture>
-                                    <source srcset="assets/img/icons/html.webp" type="image/webp">
-                                    <source srcset="assets/img/icons/html.png" type="image/jpg">
-                                    <img width="64" height="64" class="icon" src="assets/img/icons/html.png">
-                                </picture>
-                                <p>HTML5</p>
-                                <div data-title="91" class="amount"></div>              
-                            </li>
-                            <li>
-                                <picture>
-                                    <source srcset="assets/img/icons/css.webp" type="image/webp">
-                                    <source srcset="assets/img/icons/css.png" type="image/jpg">
-                                    <img width="64" height="64" class="icon" src="assets/img/icons/css.png">
-                                </picture>
-                                <p>CSS3</p>
-                                <div data-title="91" class="amount"></div>              
-                            </li>
-                            <li>
+                            <li class="moduleCfast">
                                 <picture>
                                     <source srcset="assets/img/icons/python.webp" type="image/webp">
                                     <source srcset="assets/img/icons/python.png" type="image/jpg">
                                     <img width="64" height="64" class="icon" src="assets/img/icons/python.png">
                                 </picture>
-                                <p>Python 3</p>
+                                <p>Python</p>
                                 <div data-title="64" class="amount"></div>              
                             </li>
-                            <li>
+                            <li class="moduleCfast">
                                 <picture>
                                     <source srcset="assets/img/icons/pytorch.webp" type="image/webp">
                                     <source srcset="assets/img/icons/pytorch.png" type="image/jpg">
@@ -134,16 +107,43 @@
                                 <p>PyTorch</p>
                                 <div data-title="47" class="amount"></div>              
                             </li>
-                            <li>
+                            <li class="moduleCfast">
                                 <picture>
                                     <source srcset="assets/img/icons/tensorflow.webp" type="image/webp">
                                     <source srcset="assets/img/icons/tensorflow.png" type="image/jpg">
                                     <img width="64" height="64" class="icon" src="assets/img/icons/tensorflow.png">
                                 </picture>
-                                <p>TensorFlow 2</p>
+                                <p>TensorFlow</p>
                                 <div data-title="40" class="amount"></div>              
                             </li>
-                            <li>
+                            <li class="moduleCfast">
+                                <picture>
+                                    <source srcset="assets/img/icons/sql.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/sql.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/sql.png">
+                                </picture>
+                                <p>SQL</p>
+                                <div data-title="40" class="amount"></div>              
+                            </li>
+                            <li class="moduleCfast">
+                                <picture>
+                                    <source srcset="assets/img/icons/git.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/git.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/git.png">
+                                </picture>
+                                <p>GIT</p>
+                                <div data-title="40" class="amount"></div>              
+                            </li>
+                            <li class="moduleCfast">
+                                <picture>
+                                    <source srcset="assets/img/icons/php.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/php.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/php.png">
+                                </picture>
+                                <p>PHP 7.2</p>
+                                <div data-title="92" class="amount"></div>              
+                            </li>
+                            <li class="moduleCfast">
                                 <picture>
                                     <source srcset="assets/img/icons/csharp.webp" type="image/webp">
                                     <source srcset="assets/img/icons/csharp.png" type="image/jpg">
@@ -151,6 +151,24 @@
                                 </picture>
                                 <p>C#</p>
                                 <div data-title="28" class="amount"></div>              
+                            </li>
+                            <li class="moduleCfast">
+                                <picture>
+                                    <source srcset="assets/img/icons/flutter.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/flutter.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/flutter.png">
+                                </picture>
+                                <p>Flutter</p>
+                                <div data-title="45" class="amount"></div>              
+                            </li>
+                            <li class="moduleCfast">
+                                <picture>
+                                    <source srcset="assets/img/icons/pizza.webp" type="image/webp">
+                                    <source srcset="assets/img/icons/pizza.png" type="image/jpg">
+                                    <img width="64" height="64" class="icon" src="assets/img/icons/pizza.png">
+                                </picture>
+                                <p>Neapolitan pizza</p>
+                                <div data-title="86" class="amount"></div>              
                             </li>
                         </ul>
                     </div>
@@ -167,24 +185,21 @@
                                 <li class="moduleB">
                                     <h4>Master in Artificial Intelligence Systems</h4>
                                     <h5>University of Trento - Trento, Italy</h5>
-                                    <h5>September 2020 - Present</h5>
-                                    <h3>Master course covering AI contents with specialization on Computer Vision field</h3>
+                                    <h5>September 2020 - June 2023</h5>
                                     <p class="moduleC">Acquired:</p>
-                                    <p class="moduleC">Deep Learning, Machine Learning, Computer Vision, Data Mining, Natual Language Processing, Artificial Intelligence fundaments</p>
+                                    <p class="moduleC">Deep Learning, Machine Learning, Computer Vision, Data Mining, Natual Language Processing</p>
                                 </li>
-                                <li class="complete moduleB">
+                                <li class="completed moduleB">
                                     <h4>Erasmus+</h4>
                                     <h5>SOFIA UNIVERSITY ST. KLIMENT OHRIDSKI - Sofia, Bulgaria</h5>
                                     <h5>September 2018 - February 2019</h5>
-                                    <h3>Erasmus+ studying period</h3>
                                     <p class="moduleC">Acquired:</p>
-                                    <p class="moduleC">English (C1), Computational Complexity, Computability, AI Fundaments</p>
+                                    <p class="moduleC">English (C1), Computational Complexity, Computability, Software Architecture, AI Fundaments</p>
                                 </li>
-                                <li class="complete moduleB">
+                                <li class="completed moduleB">
                                     <h4>Bachelor in Computer Science</h4>
                                     <h5>University of Trento - Trento, Italy</h5>
                                     <h5>September 2016 - March 2020</h5>
-                                    <h3>Bachelor in Computer Science ended by a thesis involving the development of an Android application to enhance the human mental health</h3>
                                     <p class="moduleC">Acquired:</p>
                                     <p class="moduleC">Calculus I, Algebra, Statistics, Physics, Logics, Software Engineering, Algorithms and Data Structure, Databases, Object Oriented Programming, Web Programming, Android Programming</p>
                                 </li>
@@ -193,16 +208,15 @@
                         <div class="experience">
                             <h2 class="subtitle">Working Experience</h2>
                             <ul>
-                                <li class="moduleB">
-                                    <h4>Full Stack Web Developer</h4>
+                                <li class="completed moduleB">
+                                    <h4>Software Developer</h4>
                                     <h5>Schio - Vicenza, Italy</h5>
-                                    <h5>July 2020 - Present</h5>
-                                    <h3>- Full Stack Web Development using a proprietary CMS framework. <br>
-                                        - Deployment/customization of features based on customers's needs, creation of custom website graphics from scratch and implementation of new features in the proprietary codebase. <br>
-                                        - Deployment of few tools for automating internal processes in bash and C# <br>
-                                        - Deployment of a couple of mobile apps with <a href="https://flutter.dev/">Flutter</a> and <a href="https://dart.dev/">Dart</a></h3>
+                                    <h5>July 2020 - August 2022</h5>
+                                    <h3>- Developed frontend/backend components for <b>120+ different websites.</b> <br>
+                                        - Proposed and developed tools for automating processes (<b>increased</b> daily <b>efficiency by 15%</b>). <br>
+                                        - Created a mobile application (Flutter) and the API’s to allow users book services.</h3>
                                     <p class="moduleC">Acquired:</p>
-                                    <p class="moduleC">PHP, HTML, CSS, Javascript, jquery, MySQL, SEO, C#, SQLServer</p>
+                                    <p class="moduleC">PHP, HTML, CSS, Javascript, jquery, MySQL, SEO, C#, SQLServer, Flutter</p>
                                 </li>
                             </ul>
                         </div>
@@ -212,39 +226,56 @@
 
             <section id="projects">
                 <div class="wrapper">
-                    <h2 class="title">Personal Projects</h2>
+                    <h2 class="title">Projects</h2>
                     <ul>
-                        <li class="in-progress moduleC">
-                            <a href="https://github.com/itLovaz/itLovaz.github.io" target="_blank">
+                        <li class="completed moduleC">
+                            <a href="https://github.com/itLovaz/spam-classifier" target="_blank">
                                 <div class="image">
                                     <div>
                                         <picture>
-                                            <source srcset="assets/img/website.webp" type="image/webp">
-                                            <source srcset="assets/img/website.jpg" type="image/jpg">
-                                            <img width="800" height="599" alt="Personal Website Resume Page" src="assets/img/website.jpg">
+                                            <source srcset="assets/img/spam.webp" type="image/webp">
+                                            <source srcset="assets/img/spam.jpg" type="image/jpg">
+                                            <img width="800" height="600" alt="Spam Classifier" src="assets/img/spam.jpg">
                                         </picture>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4>Website Resume</h4>
-                                    <p>Website page hosted by Github to be used as a better and faster reference for my resume.</p>
+                                    <h4>Spam Classifier</h4>
+                                    <p>SVM classifier to detect websites' spam contact messages</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="in-progress moduleC">
-                            <a href="https://github.com/itLovaz/GRG" target="_blank">
+                        <li class="in-progress gtg moduleC">
+                            <a href="https://github.com/itLovaz/GTG" target="_blank">
                                 <div class="image">
                                     <div>
                                         <picture>
-                                            <source srcset="assets/img/grg.webp" type="image/webp">
-                                            <source srcset="assets/img/grg.jpg" type="image/jpg">
-                                            <img width="800" height="600" src="assets/img/grg.jpg" alt="Genius Rap Generator">
+                                            <source srcset="assets/img/gtg.webp" type="image/webp">
+                                            <source srcset="assets/img/gtg.jpg" type="image/jpg">
+                                            <img width="800" height="600" src="assets/img/gtg.jpg" alt="Genius Rap Generator">
                                         </picture>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <h4>Genius Rap Generator</h4>
-                                    <p>Neural network to generate text from albums lyrics availables on Genius</p>
+                                    <p>LSTM model to generate text from albums' lyrics retrieved on Genius</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="completed moduleC">
+                            <a href="https://github.com/itLovaz/Market-1501" target="_blank">
+                                <div class="image">
+                                    <div>
+                                        <picture>
+                                            <source srcset="assets/img/market.webp" type="image/webp">
+                                            <source srcset="assets/img/market.jpg" type="image/jpg">
+                                            <img width="800" height="600" src="assets/img/market.jpg" alt="Market-1501">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h4>Market-1501</h4>
+                                    <p>Final group project for Deep Learning course to solve classification and re-identification tasks on the Market-1501 dataset</p>
                                 </div>
                             </a>
                         </li>
